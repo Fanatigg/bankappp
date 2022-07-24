@@ -39,4 +39,10 @@ public class AccountDetails {
             System.out.println("Nie masz tyle środków na koncie");
         }
     }
+    public long getBalance() {
+        return balance;
+    }
+    public void setBalance(long balance) {
+        this.balance = balance;
+    }
 }

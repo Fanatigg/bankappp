@@ -8,21 +8,21 @@ public class Bankingapp {
         System.out.println("Witaj w aplikacji bankowej");
         account.createAccount();
 
-        int inputNumber = scanner.nextInt();
-        //int inputNumber;
+        int inputNumber;
         do {
             System.out.println("Co dzisiaj robimy? \n 1. Pokaż informacje o koncie \n 2. Wpłata gotówy \n 3. Wypłata gotówy \n 4. Wyjście");
-            switch (inputNumber){
+            inputNumber = scanner.nextInt();
+            switch (inputNumber) {
                 case 1:
                     account.showAccount();
                     break;
-                    case 2:
-                        account.deposit();
-                        break;
-                        case 3:
-                            account.withdrawal();
-                            break;
+                case 2:
+                    account.deposit();
+                    break;
+                case 3:
+                    account.withdrawal();
+                    break;
             }
-        } while(inputNumber != 4);
+        } while (inputNumber != 4);
     }
 }
