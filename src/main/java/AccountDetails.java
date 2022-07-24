@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class AccountDetails {
@@ -23,5 +24,19 @@ public class AccountDetails {
         login = scanner.next();
         System.out.println("Provide account balance");
         balance = scanner.nextLong();
+    }
+    public void deposit(){
+        System.out.println("Ile pieniążków chcesz wpłacić?");
+        long kasa = scanner.nextLong();
+        balance = kasa + balance;
+    }
+    public void withdrawal() {
+        System.out.println("Ile pieniędzy wypłacić?");
+        long kasa = scanner.nextLong();
+        if (balance >= kasa) {
+            balance = balance - kasa;
+        } else {
+            System.out.println("Nie masz tyle środków na koncie");
+        }
     }
 }
